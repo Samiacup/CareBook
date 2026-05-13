@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Booked</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div style="width:500px;margin:100px auto;background:white;padding:40px;text-align:center;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.2);">
+    <h1 style="color:green;">✅ Appointment Booked</h1>
+    <h2>Thank You For Choosing CareBook</h2>
+
+    <p style="font-size:22px; margin-top:20px;">
+        Total Appointments Booked: <span id="count">0</span>
+    </p>
+
+    <br>
+    <a href="index.html"><button>Back Home</button></a>
+</div>
+
+<script>
+    let totalAppointments = localStorage.getItem("appointments");
+    if(totalAppointments == null){ totalAppointments = 0; }
+    document.getElementById("count").innerHTML = totalAppointments;
+</script>
+
+<footer>CareBook Hospital © 2026</footer>
+</body>
+</html>
+
